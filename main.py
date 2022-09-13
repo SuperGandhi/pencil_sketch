@@ -4,7 +4,7 @@ import imageio
 import scipy.ndimage
 import cv2
 
-img = 'brothers.jpg'
+img = 'motherandfather.jpg'
 
 def rgb2gray(rgb):
     return np.dot(rgb[...,:3], [0.2989,0.5870,0.1140])
@@ -24,5 +24,5 @@ i = 255-gray
 blur= scipy.ndimage.filters.gaussian_filter(i,sigma=15)
 r = dodge(blur,gray)
 
-cv2.imwrite('new-image.png',r)
+cv2.imwrite('new-image2.png',r)
 
